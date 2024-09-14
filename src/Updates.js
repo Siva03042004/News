@@ -5,7 +5,7 @@ export const Updates = () => {
 
     const [updatenews,setupdatenews] = useState([])
     useEffect(() => {
-        let url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=603dd2b41a644f4faadc8ab7f8603c77`
+        let url = `https://newsapi.org/v2/everything?q=apple&from=2024-09-13&to=2024-09-13&sortBy=popularity&apiKey=603dd2b41a644f4faadc8ab7f8603c77`
       fetch(url).then(response => response.json()).then(data => setupdatenews(data.articles)).catch()
     },[])
 
